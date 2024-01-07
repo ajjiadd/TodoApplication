@@ -7,9 +7,36 @@
 </head>
 <body>
     <div>
-        <button id="displayTodos" onclick="handlers.displaytodos()">Display</button>
-        <button id="ToggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+        <div>
+            <button id="displayTodos" onclick="handlers.displaytodos()">Display</button>
+            <button id="ToggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+        </div>
+        <br>
+        <div>
+            <input id="inputTodo"/>
+            <button onclick="handlers.addTodos()">Add Todo</button>
+        </div>
+        <br>
+        <div>
+            <input type="number" id="indexNumbr">
+            <input type="text" id="editText">
+            <button onclick="handlers.changeTodos()">Edit Todo</button>
+        </div>
+        <br>
+        <div>
+            <input type="number" id="toggleIndex">
+            <button onclick="handlers.toggleTodo()">Toggle Todo</button>
+        </div>
+        <br>
+        <div>
+            <input type="number" id="removeIndex">
+            <button onclick="handlers.removeTodos()">Remove Todo</button>
+        </div>
+        <ul>
+            
+        </ul>
     </div>
+
     
     <script src="/main.js"></script>
 </body>

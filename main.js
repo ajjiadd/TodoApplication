@@ -37,19 +37,19 @@ var todos = {
        }
        
        this.todosList.push(obj);
-        this.displayTodos();
+        views.displayTodos();
     },
 
     //change todo
     changeTodos: function (index, changeItem){
         this.todosList[index].itemText = changeItem;
-        this.displayTodos();
+        views.displayTodos();
     },
 
     //remove todo
     removeTodos: function (index){
         this.todosList.splice(index, 1);
-        this.displayTodos();
+        views.displayTodos();
     },
 
     //check list are completed or not
@@ -82,7 +82,7 @@ var todos = {
             };
         };
 
-        this.displayTodos();
+        views.displayTodos();
 
     },
 
@@ -115,7 +115,7 @@ var handlers = {
             todos.displayTodos();
         });
         */
-       todos.displayTodos();
+       views.displayTodos();
     },
 
     toggleAll: function (){
@@ -131,22 +131,86 @@ var handlers = {
 
     },
 
+    addTodos: function (){
+        var inputValue = document.getElementById("inputTodo");
+        todos.addTodos(inputValue.value);
+        inputValue.value = "";
+    },
+
+    changeTodos: function (){
+        var indexNumbr = document.getElementById("indexNumbr").value;
+        var editText = document.getElementById("editText").value;
+        todos.changeTodos(indexNumbr, editText);
+    },
+
+    toggleTodo: function(){
+        var toggleIndex = document.getElementById("toggleIndex");
+        todos.toggleTodo(toggleIndex.value);
+    },
+
+    removeTodos: function(){
+        var removeIndex = document.getElementById("removeIndex").value;
+        todos.removeTodos(removeIndex);
+    },
+
+    dltfromList: function(){
+        var ul = document.querySelector("ul");
+        ul.addEventListener("click", function(evt){  
+            if (evt.target.id ==="delete"){
+                var li = evt.target.parentNode;
+                ul.removeChild(li);
+             }
+
+        });
+
+    },
+
+};
+
+var views = {
+
+    displayTodos: function(){
+        debugger;
+        var todosUl = document.querySelector("ul");
+        todosUl.innerHTML = "";
+        for(var i=0;i<todos.todosList.length;i++){
+            var todoLi = document.createElement("li");
+            var todo = todos.todosList[i];
+            if(todos.todosList.length === 0){
+                console.log("No item added!");
+            }else{
+                if(todos.todosList[i].completed === true){
+                    
+                    // console.log("[x]",todoItemm);
+                    todoLi.textContent = "[x] " + todo.itemText;
+                    
+                    
+                }else{
+                    // console.log("()",todoItemm);
+                    todoLi.textContent = "[] " + todo.itemText;
+                }
+            }
+            todoLi.id = i;
+            todoLi.appendChild(this.createBtn());
+            todosUl.appendChild(todoLi);
+        }
+    },
+
+    createBtn: function(){
+        var dltBtn = document.createElement("button");
+        // dltBtn.setAttribute("id", "delete");
+        dltBtn.id = "delete";
+        dltBtn.textContent = "Delete";
+        return dltBtn;
+    },
+
+
 };
 
 
 
-
 //input
-todos.addTodos("item 1");
-console.log("---------------------------------------");
-todos.addTodos("item 2");
-console.log("---------------------------------------");
-todos.addTodos("item 3");
-console.log("---------------------------------------");
-todos.addTodos("item 4");
-console.log("---------------------------------------");
-todos.addTodos("item 5");
-console.log("---------------------------------------");
+handlers.dltfromList();
 console.log("Output");
 
 
