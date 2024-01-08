@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nvbar{
+    text-align: center;
+    /* border: 2px solid red; */
+    background: #FF7F50;
+    color: aliceblue;
+    padding: 15px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+}
+.box-ii{
+    border: 2px solid gray;
+    padding: 25px;
+    border-radius: 0 15px;
+}
+.box-i{
+    
+    
+    display: flex;
+    gap: 1rem ;
+    justify-content: space-between;
+    text-align: center;
+    background: #FF7F50;
+    border-radius: 0 25px 25px 0;
+}
+.sideLft{
+    background: #5DADE2;
+    border-radius: 0 25px 25px 0;
+    padding: 15px;
+
+}
+
+.sideLft button{
+    justify-content: left;
+    gap: 5px;
+    background: #f6f7f8;
+    padding: 3px;
+    border-radius: 3px;
+    
+}
+
+.sideLft div{
+    justify-content: space-between;
+}
+
+.leftBox{
+ padding: 10px;
+}
+.rightBox{
+    padding: 20px;
+    justify-content: center;
+
+}
+.rightBox button{
+    /* background: #f6f7f8; */
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #FF7F50;
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.ulDiv{
+    margin-top: 10px;
+    background: #f7f7f7;
+    border-radius: 30px;
+    padding: 5px;
+    
+    /* padding-top: 10px; */
+}
+.ulDiv ul li{
+    padding: 5px;
+    background: #FF7F50;
+    border-radius: 30px;
+    color: white;
+    border: 2px solid white;
+    
+}
+.inptHead{
+    background: #5DADE2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+input{
+    padding: 3px;
+    border-radius: 3px;
+    margin: 5px;
+}
+.barline{
+    background: #f6f7f8;
+    padding: 3px;
+    margin: 25px 0 25px 0;
+    border-radius: 30px;
+}
+.buttonMrgn{
+    
+    display: flex;
+    justify-content: 2rem;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+h3{
+    padding-bottom: 3px;
+}
+
+.buttonMrgn button{
+    background-color: #FF7F50;
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+label{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+}
+.x{
+    border: 2px solid red;
+}

@@ -1,43 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Application | Reminder</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-        <div>
-            <button id="displayTodos" onclick="handlers.displaytodos()">Display</button>
+    <nav class="nvbar">
+        <h1>TODO Application</h1>
+    </nav>
+    <div class="container">
+        <!-- <div>
+             <button id="displayTodos" onclick="handlers.displaytodos()">Display</button>
             <button id="ToggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+        </div> -->
+
+        <div class="box-ii">
+
+            <div class="box-i">
+
+                <div class=" sideLft leftBox">
+                    <div>
+                        <h3>Controler</h3>
+                        <hr>
+                        <br>
+                    </div>
+    
+                    <div class="">
+                        <div>
+                            <label for="">Edit Todo Option:</label>
+                        </div>
+                        <div class="buttonMrgn">
+                            <div>
+                                <input type="number" id="indexNumbr" placeholder="List count to 0...">
+                                <input type="text" id="editText" placeholder="Edit text">
+                            </div>
+                            <div>
+                                <button onclick="handlers.changeTodos()" placeholder="Edit text...">Edit Todo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <div>
+                            <label for="">Toggle Todo Option</label>
+                        </div>
+                        <div class="buttonMrgn">
+                            <div>
+                                <input type="number" id="toggleIndex" placeholder="List count to 0...">
+                            </div>
+                            <div>
+                                <button onclick="handlers.toggleTodo()">Toggle Todo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="">
+                        <div>
+                            <label for="">Remove Todo Option</label>
+                        </div>
+    
+                        <div class="buttonMrgn ">
+                            <div>
+                                <input type="number" id="removeIndex" placeholder="List count to 0...">
+                            </div>
+                            <div>
+                                <button onclick="handlers.removeTodos()">Remove Todo</button>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+    
+    
+                </div>
+
+                <span class="barline"></span>
+    
+                <div class="">
+                    <div class="rightBox">
+                        <div>
+                            <div class="inptHead">
+                                <button id="ToggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+                                <input id="inputTodo" placeholder="Add Task..."/>
+                                <button onclick="handlers.addTodos()">Add Todo</button>
+                            </div>
+                            
+                            <div class="ulDiv">
+                                <ul>
+    
+                                </ul>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <br>
+    
+    
+            </div>
+
         </div>
-        <br>
-        <div>
-            <input id="inputTodo"/>
-            <button onclick="handlers.addTodos()">Add Todo</button>
-        </div>
-        <br>
-        <div>
-            <input type="number" id="indexNumbr">
-            <input type="text" id="editText">
-            <button onclick="handlers.changeTodos()">Edit Todo</button>
-        </div>
-        <br>
-        <div>
-            <input type="number" id="toggleIndex">
-            <button onclick="handlers.toggleTodo()">Toggle Todo</button>
-        </div>
-        <br>
-        <div>
-            <input type="number" id="removeIndex">
-            <button onclick="handlers.removeTodos()">Remove Todo</button>
-        </div>
-        <ul>
-            
-        </ul>
+
+        
+
+
     </div>
 
-    
+
     <script src="/main.js"></script>
 </body>
+
 </html>
