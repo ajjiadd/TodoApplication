@@ -138,23 +138,23 @@ var handlers = {
     },
 
     changeTodos: function (){
-        var indexNumbr = document.getElementById("indexNumbr").value;
-        var editText = document.getElementById("editText").value;
-        todos.changeTodos(indexNumbr, editText);
-        indexNumbr = "";
-        editText = "";
+        var indexNumbr = document.getElementById("indexNumbr");
+        var editText = document.getElementById("editText");
+        todos.changeTodos(indexNumbr.value, editText.value);
+        indexNumbr.value = "";
+        editText.value = "";
     },
 
     toggleTodo: function(){
-        var toggleIndex = document.getElementById("toggleIndex");
-        todos.toggleTodo(toggleIndex.value);
-        toggleIndex.value = "";
+        var toggleIndex = document.getElementById("toggleIndex").value;
+        todos.toggleTodo(toggleIndex);
+        toggleIndex = "";
     },
 
     removeTodos: function(){
-        var removeIndex = document.getElementById("removeIndex").value;
-        todos.removeTodos(removeIndex);
-        removeIndex = "";
+        var removeIndex = document.getElementById("removeIndex");
+        todos.removeTodos(removeIndex.value);
+        removeIndex.value = "";
     },
 
     dltfromList: function(){
