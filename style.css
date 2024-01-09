@@ -61,7 +61,7 @@
     justify-content: center;
 
 }
-.rightBox button{
+.inptHead button{
     /* background: #f6f7f8; */
     padding: 3px;
     border-radius: 3px;
@@ -137,6 +137,7 @@ h3{
     cursor: pointer;
 
 }
+
 
 label{
     display: flex;

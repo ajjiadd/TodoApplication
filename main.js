@@ -141,16 +141,20 @@ var handlers = {
         var indexNumbr = document.getElementById("indexNumbr").value;
         var editText = document.getElementById("editText").value;
         todos.changeTodos(indexNumbr, editText);
+        indexNumbr = "";
+        editText = "";
     },
 
     toggleTodo: function(){
         var toggleIndex = document.getElementById("toggleIndex");
         todos.toggleTodo(toggleIndex.value);
+        toggleIndex.value = "";
     },
 
     removeTodos: function(){
         var removeIndex = document.getElementById("removeIndex").value;
         todos.removeTodos(removeIndex);
+        removeIndex = "";
     },
 
     dltfromList: function(){
